@@ -10,3 +10,16 @@ def remove_user(email):
     users = db['users']
     users.delete_many({'email': email})
     print('removing user ' + email)
+
+@keyword('Insert user in database')
+def insert_user(name, email, password):
+    doc = {
+        'name': name,
+        'email': email,
+        'password': password
+    }
+
+    users = db['users']
+    users.insert_one(doc)
+    print('inserting user')
+    print(doc)
