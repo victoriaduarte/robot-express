@@ -1,4 +1,5 @@
 *** Settings ***
+Library    libs/database.py
 Library    Browser
 
 *** Keywords ***

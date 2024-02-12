@@ -12,6 +12,8 @@ The system must allow registering a new user
     ${name}        Set Variable    Victória Duarte
     ${email}       Set Variable    victoriaduarte@yahoo.com
     ${password}    Set Variable    pwd123
+    
+    Remove user from database    ${email}
 
     Start Session    signup
 
