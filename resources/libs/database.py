@@ -12,14 +12,14 @@ def remove_user(email):
     print('removing user ' + email)
 
 @keyword('Insert user in database')
-def insert_user(name, email, password):
-    doc = {
-        'name': name,
-        'email': email,
-        'password': password
-    }
+def insert_user(user):
+    # doc = {
+    #     'name': name,
+    #     'email': email,
+    #     'password': password
+    # }
 
     users = db['users']
-    users.insert_one(doc)
+    users.insert_one(user)
     print('inserting user')
-    print(doc)
+    print(user)

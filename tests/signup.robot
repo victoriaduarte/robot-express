@@ -6,12 +6,13 @@ Resource    ../resources/base.robot
 Test Teardown    Take Screenshot
 
 *** Test Cases ***    
-The system must allow registering a new user    
-    ${name}         Set Variable    Victória Duarte
-    ${email}        Set Variable    victoriaduarte@yahoo.com
-    ${password}     Set Variable    pwd123
+The system must allow registering a new user 
+    ${user}    Create Dictionary    
+    ...    name=Victória Duarte    
+    ...    email=victoriaduarte@yahoo.com    
+    ...    password=pwd123
 
-    Remove user from database    ${email}
+    Remove user from database    ${user}[email]
 
     Start Session    signup
 
@@ -19,9 +20,9 @@ The system must allow registering a new user
     Wait For Elements State    css=h1    visible    5   
     Get Text    css=h1    equal    Faça seu cadastro
 
-    Fill Text    css=#name        ${name}
-    Fill Text    css=#email       ${email}
-    Fill Text    css=#password    ${password}
+    Fill Text    css=#name        ${user}[name]
+    Fill Text    css=#email       ${user}[email]
+    Fill Text    css=#password    ${user}[password]
     Click    css=#buttonSignup
     
     # Assertion
@@ -32,13 +33,13 @@ The system must allow registering a new user
 The system must prevent duplicate email registration
     [Tags]    dup
 
-    # Create email
-    ${name}         Set Variable    Duarte Victória
-    ${email}        Set Variable    duartevictoria@gmail.com
-    ${password}     Set Variable    pwd123
-
-    Remove user from database   ${email}
-    Insert user in database     ${name}    ${email}    ${password}
+    ${user}    Create Dictionary    
+    ...    name=Duarte Victória
+    ...    email=duartevictoria@gmail.com 
+    ...    password=pwd123
+  
+    Remove user from database   ${user}[email]
+    Insert user in database     ${user}
 
     Start Session    signup
 
@@ -46,9 +47,9 @@ The system must prevent duplicate email registration
     Wait For Elements State    css=h1    visible    5   
     Get Text    css=h1    equal    Faça seu cadastro
 
-    Fill Text    css=#name        ${name}
-    Fill Text    css=#email       ${email}
-    Fill Text    css=#password    ${password}
+    Fill Text    css=#name        ${user}[name]
+    Fill Text    css=#email       ${user}[email]
+    Fill Text    css=#password    ${user}[password]
     Click    css=#buttonSignup
     
     # Assertion
