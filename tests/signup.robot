@@ -2,7 +2,6 @@
 Documentation        Test scenarios for user registration
 
 Library        Browser
-Library        FakerLibrary
 
 Resource    ../resources/base.robot
 
@@ -10,8 +9,8 @@ Resource    ../resources/base.robot
 The system must allow registering a new user
 
     # Generate random test data
-    ${name}        FakerLibrary.Name
-    ${email}       FakerLibrary.Email
+    ${name}        Set Variable    Victória Duarte
+    ${email}       Set Variable    victoriaduarte@yahoo.com
     ${password}    Set Variable    pwd123
 
     Start Session    signup
