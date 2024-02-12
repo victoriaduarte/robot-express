@@ -3,6 +3,7 @@ Documentation        Test scenarios for user registration
 
 Resource    ../resources/base.robot
 
+Test Setup       Start Session    signup
 Test Teardown    Take Screenshot
 
 *** Test Cases ***    
@@ -13,8 +14,6 @@ The system must allow registering a new user
     ...    password=pwd123
 
     Remove user from database    ${user}[email]
-
-    Start Session    signup
 
     # Checkpoint
     Wait For Elements State    css=h1    visible    5   
@@ -40,8 +39,6 @@ The system must prevent duplicate email registration
   
     Remove user from database   ${user}[email]
     Insert user in database     ${user}
-
-    Start Session    signup
 
     # Checkpoint
     Wait For Elements State    css=h1    visible    5   
