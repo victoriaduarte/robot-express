@@ -2,8 +2,11 @@
 Library    libs/database.py
 Library    Browser
 
+*** Variables ***
+${BASE_URL}    http://localhost:3000
+
 *** Keywords ***
 Start Session
     [Arguments]    ${page}=${EMPTY}
     New Browser      browser=chromium
-    New Page         http://localhost:3000/${page}
+    New Page         ${BASE_URL}/${page}
