@@ -26,4 +26,12 @@ Notice should be
     
     # Assertion
     Wait For Elements State    ${element}    visible    5
-    Get Text                   ${element}    equal      ${expected_text}    
+    Get Text                   ${element}    equal      ${expected_text} 
+
+Alert should be
+    [Arguments]    ${expected_text}
+
+    ${element}    Set Variable    css=.alert-error
+    
+    # Assertion
+    Wait For Elements State    ${element} >> text=${expected_text}   visible    5
