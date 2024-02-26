@@ -4,6 +4,7 @@ Library    Browser
 
 Resource    env.resource
 Resource    pages/SignupPage.resource
+Resource    pages/LoginPage.resource
 
 *** Keywords ***
 Start Session
