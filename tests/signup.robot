@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation        Test scenarios for user registration
 
-Resource    ../resources/base.robot
-Resource    ../resources/pages/SignupPage.robot
+Resource    ../resources/base.resource
+Resource    ../resources/pages/SignupPage.resource
 
 Test Setup       Start Session
 Test Teardown    Take Screenshot

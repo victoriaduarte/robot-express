@@ -2,7 +2,7 @@
 Documentation        Online
 
 Library        Browser
-Resource       ../resources/base.robot
+Resource       ../resources/base.resource
 
 *** Test Cases ***
 Webapp should be online

@@ -2,7 +2,7 @@
 Documentation    Elements and actions in signup page
 
 Library    Browser
-Resource    ../env.robot
+Resource    ../env.resource
 
 *** Keywords ***
 Go to signup page
