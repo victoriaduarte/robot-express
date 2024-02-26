@@ -48,3 +48,14 @@ Required fields
     Alert should be    Informe seu e-email
     Alert should be    Informe uma senha com pelo menos 6 digitos
 
+The system must prevent registering invalid email
+    [Tags]    invalid
+
+    ${user}    Create Dictionary    
+    ...    name=Fulana da Silva
+    ...    email=fulana.com.br
+    ...    password=123456
+
+    Go to signup page
+    Submit signup form    ${user}
+    Alert should be    Digite um e-mail válido
