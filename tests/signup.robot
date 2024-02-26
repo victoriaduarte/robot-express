@@ -2,7 +2,6 @@
 Documentation        Test scenarios for user registration
 
 Resource    ../resources/base.resource
-Resource    ../resources/pages/SignupPage.resource
 
 Test Setup       Start Session
 Test Teardown    Take Screenshot
