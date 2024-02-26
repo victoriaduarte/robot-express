@@ -60,18 +60,40 @@ The system must prevent registering invalid email
     Submit signup form    ${user}
     Alert should be    Digite um e-mail válido
 
-The system must prevent registering short password
+The system must prevent registering password with 1 character
     [Tags]    short_pass
-    @{password}    Create List    1    12    123    1234    12345
+    [Template]
+    Short password    1
 
-    FOR    ${element}    IN    @{password}
-        ${user}    Create Dictionary    
-        ...    name=Duarte Victória
-        ...    email=duartevictoria@outlook.com 
-        ...    password=${element}
+The system must prevent registering password with 2 characters
+    [Tags]    short_pass
+    [Template]
+    Short password    12
 
-        Go to signup page
-        Submit signup form    ${user}
+The system must prevent registering password with 3 characters
+    [Tags]    short_pass
+    [Template]
+    Short password    123
 
-        Alert should be    Informe uma senha com pelo menos 6 digitos
-    END
+The system must prevent registering password with 4 characters
+    [Tags]    short_pass
+    [Template]
+    Short password    1234
+
+The system must prevent registering password with 5 characters
+    [Tags]    short_pass
+    [Template]
+    Short password    12345
+
+*** Keywords ***
+Short password
+    [Arguments]    ${short_pass}
+    ${user}    Create Dictionary    
+    ...    name=Duarte Victória
+    ...    email=duartevictoria@outlook.com 
+    ...    password=${short_pass}
+
+    Go to signup page
+    Submit signup form    ${user}
+
+    Alert should be    Informe uma senha com pelo menos 6 digitos
