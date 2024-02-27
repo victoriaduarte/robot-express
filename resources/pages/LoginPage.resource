@@ -16,10 +16,10 @@ User should be logged in
 
     ${element}    Set Variable    css=header .right small
 
-    Wait For Elements State    css=${element}
+    Wait For Elements State    ${element}
     ...    visible    5    
     
     @{full_name}=  Split String    ${user}[name]    ${SPACE}
-    Get Text    css=${element}    equal    Olá, ${full_name}[0]
+    Get Text    ${element}    equal    Olá, ${full_name}[0]
 
     Get Url    equal     http://localhost:3000/tasks
