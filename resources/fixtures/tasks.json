@@ -1,0 +1,13 @@
+{
+    "create": {
+        "user": {
+            "name": "Victória Duarte",
+            "email": "victoriaduarte@yahoo.com",  
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Criar uma nova versão do Ipod",
+            "tags": ["ios","music","ipod"]
+        }
+    }
+}

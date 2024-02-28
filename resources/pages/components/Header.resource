@@ -17,3 +17,6 @@ User should be logged in
     Get Text    ${element}    equal    Olá, ${full_name}[0]
 
     Get Url    equal     http://localhost:3000/tasks
+
+Go to task form
+    Click    css=.button-add >> text=Nova Tarefa
