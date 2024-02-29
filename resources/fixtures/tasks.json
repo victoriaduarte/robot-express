@@ -20,5 +20,16 @@
             "name": "Recrutar novos meta humanos",
             "tags": []
         }
+    },
+    "tags_limit": {
+        "user": {
+            "name": "Nara Shikamaru",
+            "email": "narashikamaru@gmail.com",  
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Learn Python",
+            "tags": ["qax","python","programming","pip"]
+        }
     }
 }

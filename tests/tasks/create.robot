@@ -45,3 +45,17 @@ Should not create task with duplicate name
 
     # User should see a notification of duplication
     Notice should be    Oops! Tarefa duplicada.    
+
+Should not create task when reach the limit of tags
+    ${data}    Get fixture    tasks    tags_limit
+    
+    Clean user from database    ${data}[user][email]
+    Insert user in database     ${data}[user]
+
+    Submit login form           ${data}[user]
+    User should be logged in    ${data}[user]
+    
+    Go to task form
+    Submit task form    ${data}[task]
+
+    Notice should be    Oops! Limite de tags atingido.   
