@@ -18,7 +18,7 @@ Resource    services.resource
 
 *** Keywords ***
 Start Session
-    New Browser      browser=chromium
+    New Browser      browser=${BROWSER}
     New Page         ${BASE_URL}
 
 # Helpers
