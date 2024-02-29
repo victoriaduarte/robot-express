@@ -29,3 +29,21 @@ Get fixture
     ...    encoding=utf-8
         
     RETURN    ${data}[${scenario}]
+
+Reset user from database
+    [Arguments]    ${user}
+
+    Clean user from database    ${user}[email]
+    Insert user in database     ${user}
+
+Create a new task from API
+    [Arguments]    ${data}
+
+    POST user session    ${data}[user]
+    POST a new task      ${data}[task]
+
+Login
+    [Arguments]    ${user}
+
+    Submit login form           ${user}
+    User should be logged in    ${user}

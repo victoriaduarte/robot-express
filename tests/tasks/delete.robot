@@ -10,14 +10,10 @@ Test Teardown    Take Screenshot
 Should delete a task
     ${data}    Get fixture    tasks    delete
     
-    Clean user from database    ${data}[user][email]
-    Insert user in database     ${data}[user]
+    Reset user from database    ${data}[user]
+    Create a new task from API    ${data}
 
-    POST user session    ${data}[user]
-    POST a new task      ${data}[task]
-
-    Submit login form           ${data}[user]
-    User should be logged in    ${data}[user]
+    Login    ${data}[user]
     
     Delete task    ${data}[task][name]
     
