@@ -9,5 +9,16 @@
             "name": "Criar uma nova versão do Ipod",
             "tags": ["ios","music","ipod"]
         }
+    },
+    "duplicate": {
+        "user": {
+            "name": "Duarte Victória",
+            "email": "duartevictoria@gmail.com",  
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Recrutar novos meta humanos",
+            "tags": []
+        }
     }
 }
