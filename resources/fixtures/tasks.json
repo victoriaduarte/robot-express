@@ -42,5 +42,16 @@
             "name": "Create a new AI",
             "tags": ["jarvis","ultron","ark"]
         }
+    },
+    "delete": {
+        "user": {
+            "name": "Haruno Sakura",
+            "email": "harunosakura@gmail.com",  
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Create Ultron AI",
+            "tags": ["ultron","ia"]
+        }
     }
 }
