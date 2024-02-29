@@ -31,5 +31,16 @@
             "name": "Learn Python",
             "tags": ["qax","python","programming","pip"]
         }
+    },
+    "done": {
+        "user": {
+            "name": "Hatake Kakashi",
+            "email": "hatakekakashi@gmail.com",  
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Create a new AI",
+            "tags": ["jarvis","ultron","ark"]
+        }
     }
 }
