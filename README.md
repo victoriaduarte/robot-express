@@ -24,10 +24,10 @@ Automated tests for a ToDo list web application using Robot Framework.
 
 ## 🌐 Application
 *Login page*
- <img src="screenshot-login-page.png" width=50%>
+<br><img src="screenshot-login-page.png" width=50%>
 
- *Task list page*
- <img src="screenshot-task-list-page.png" width=50%>
+*Task list page*
+<br><img src="screenshot-task-list-page.png" width=50%>
 
 
 ## 💻 Installation
