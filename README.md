@@ -2,7 +2,7 @@
  
 Automated tests for a ToDo list web application using Robot Framework.
 
-## 🐱‍💻 Course
+## 📚 Course
 [Robot eXpress - Udemy](https://www.udemy.com/course/robot-express/)
 
 ## ✅ What I learned
