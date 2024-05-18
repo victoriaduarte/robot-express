@@ -3,7 +3,7 @@
 Automated tests for a ToDo list web application using Robot Framework.
 
 ## 🐱‍💻 Course
-[Robot eXpress - QAx](qax.com.br/pt/cursos/robot-express)
+[Robot eXpress - Udemy](https://www.udemy.com/course/robot-express/)
 
 ## ✅ What I learned
 - Robot Framework project structure
